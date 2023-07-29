@@ -1,7 +1,7 @@
 import {IPageableResponse} from "../model/common";
-import {swapiAxios} from "../../config/axios.config";
+import {swapiAxios} from "../config/axios.config";
 import {IPlanet} from "../model/planet.model";
-import {handleexception} from "../../error-handling/http-error";
+import {handleexception} from "../error-handling/http-error";
 
 
 const apiUrl = '/planets'

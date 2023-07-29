@@ -6,7 +6,7 @@ import filmRouter from './routes/film/filmRouter';
 import errorHandler from "./middleware/errorHandler";
 import cors from 'cors'
 
-const { PORT } = require('../config');
+const { PORT } = require('./config');
 
 const app: Express = express();
 app.use(express.json({limit: '50mb'}));

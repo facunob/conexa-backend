@@ -1,6 +1,6 @@
 import {IPageableResponse} from "../model/common";
-import {swapiAxios} from "../../config/axios.config";
-import {handleexception} from "../../error-handling/http-error";
+import {swapiAxios} from "../config/axios.config";
+import {handleexception} from "../error-handling/http-error";
 import {IFilm} from "../model/film.model";
 
 
