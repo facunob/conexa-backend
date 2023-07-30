@@ -9,7 +9,7 @@ const filmRouter = express.Router()
 
 filmRouter.get('', async (req: IPageable, res, next) => {
     try {
-        const page = parseInt(req.params.page) || 1
+        const page = parseInt(req.query.page) || 1
         const people = await filmService.findFilmsByPage(page);
 
         res.json(people);

@@ -9,7 +9,7 @@ const planetRouter = express.Router()
 
 planetRouter.get('', async (req: IPageable, res, next) => {
   try {
-    const page = parseInt(req.params.page) || 1
+    const page = parseInt(req.query.page) || 1
     const planets: IPageableResponse<IPlanet> = await planetService.findPlanetsByPage(page);
 
     res.json(planets);

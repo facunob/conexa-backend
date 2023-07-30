@@ -1,7 +1,7 @@
 import { Request } from 'express';
 
 export interface IPageable extends Request {
-  params: {
+  query: {
     page: string;
   }
 }

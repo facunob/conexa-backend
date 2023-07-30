@@ -8,7 +8,7 @@ const peopleRouter = express.Router()
 
 peopleRouter.get('', async (req: IPageable, res, next) => {
   try {
-    const page = parseInt(req.params.page) || 1
+    const page = parseInt(req.query.page) || 1
     const people = await peopleService.findPeopleByPage(page);
 
     res.json(people);

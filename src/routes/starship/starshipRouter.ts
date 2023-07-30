@@ -7,7 +7,7 @@ const starshipRouter = express.Router()
 
 starshipRouter.get('', async (req: IPageable, res, next) => {
   try {
-    const page = parseInt(req.params.page) || 1;
+    const page = parseInt(req.query.page) || 1;
     const starships = await starshipService.findStarshipsByPage(page);
 
     res.json(starships);
